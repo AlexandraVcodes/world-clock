@@ -30,6 +30,22 @@ function updateParisTime() {
 }
 setInterval(updateParisTime, 1000);
 
+function updateViennaTime() {
+  let viennaVariable = document.querySelector("#vienna");
+  if (viennaVariable) {
+    let viennaDateVariable = viennaVariable.querySelector(".date");
+    let viennaTimeVariable = viennaVariable.querySelector(".time");
+    let viennaTime = moment().tz("Europe/Vienna");
+    viennaDateVariable.innerHTML = `Today is ${moment().format(
+      "dddd, MMMM Do YYYY"
+    )}`;
+    viennaTimeVariable.innerHTML = viennaTime.format(
+      "h:mm:ss [<small>]A[</small]"
+    );
+  }
+}
+setInterval(updateViennaTime, 1000);
+
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
