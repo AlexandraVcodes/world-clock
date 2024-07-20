@@ -1,16 +1,20 @@
 body {
-  background-color: #f9f9fe;
+  background-color: #fffbb7;
   font-family: sans-serif;
 }
 
 .container {
   max-width: 600px;
   margin: 60px auto;
-  background-image: url("sanduhr_hell.jpg");
-  background-size: 72% 90%;
   padding: 30px;
   box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
   border-radius: 10px;
+  background: linear-gradient(to bottom, transparent, #fde994),
+    url("sanduhr_hoch.jpg");
+
+  background-position: center;
+  background-size: 660px 950px;
+  background-repeat: no-repeat;
 }
 
 .city {
@@ -18,7 +22,6 @@ body {
   margin: 10px 0;
   justify-content: space-between;
   padding: 30px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
 
 .city:last-child {
@@ -37,6 +40,7 @@ h2 {
 .time {
   font-size: 48px;
   font-weight: bold;
+  color: black;
 }
 
 .time small {
@@ -48,6 +52,7 @@ h2 {
 select {
   display: block;
   width: 100%;
+  opacity: 0.7;
   font-size: 18px;
   border-radius: 4px;
   padding: 10px;
@@ -56,7 +61,10 @@ select {
 h1 {
   text-align: center;
   font-family: sans-serif;
-  font-size: 36px;
+  font-size: 46px;
+  color: black;
+
+  height: 50%;
 }
 
 footer {
